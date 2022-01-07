@@ -1,0 +1,11 @@
+# copy this file to /etc/systemd/system/ or equivalent
+[Unit]
+Description=Start the alive flask script
+
+[Service]
+Type=oneshot
+# change to wherever you keep the script
+ExecStart=/home/pi/alive/server.py
+
+[Install]
+WantedBy=multi-user.target
